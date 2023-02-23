@@ -4,22 +4,94 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <div id="board-container">
-      <div id="square-one" data-value="1"></div>
-      <div id="square-two" data-value="2"></div>
-      <div id="square-three" data-value="3"></div>
-      <div id="square-four" data-value="4"></div>
-      <div id="square-five" data-value="5"></div>
-      <div id="square-six" data-value="6"></div>
-      <div id="square-seven" data-value="7"></div>
-      <div id="square-eight" data-value="8"></div>
-      <div id="square-nine" data-value="9"></div>
+
+    <div id="winning-modal">
+      <h3 id="win-heading">Won!</h3>
+      <button id="play-again">Play Again</button>
+    </div>
+
+    <div id="modal">
+      <form id="player-details-form">
+        <label for="player-name-one" id="label-one">Player One Name: </label>
+        <input type="text" id="player-name-one" minlength="1" maxlength="5" required/>
+        <label for="player-name-two" id="label-two">Player Two Name: </label>
+        <input type="text" id="player-name-two" minlength="1" maxlength="5" required/>
+      </form>
+      <button id="cancel-name">Cancel</button>
+      <button  id="confirm-name">Confirm</button>
+    </div>
+    <div id="main-container">
+      <h1 id="heading">Tic Tac Toe</h1>
+      <button id="play-btn">Play</button>
+
+      <div id="modes">
+        <div id="pvp-container">
+          <div class="card-banner">
+            <img src="img/versus.png" alt="Versus image" id="pvp-img" />
+          </div>
+          <h3 class="card-text">Player VS Player</h3>
+          <button id="pvp-btn">Start</button>
+        </div>
+        <div id="computer-container">
+          <div class="card-banner">
+            <img src="img/chip.png" alt="AI image" id="ai-img" />
+            <h3 class="card-text">Player VS AI</h3>
+            <button id="pc-btn">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="board-container">
+        <div id="square-one" data-value="1"></div>
+        <div id="square-two" data-value="2"></div>
+        <div id="square-three" data-value="3"></div>
+        <div id="square-four" data-value="4"></div>
+        <div id="square-five" data-value="5"></div>
+        <div id="square-six" data-value="6"></div>
+        <div id="square-seven" data-value="7"></div>
+        <div id="square-eight" data-value="8"></div>
+        <div id="square-nine" data-value="9"></div>
+      </div>
+
+      <div id="player-container">
+        <div id="player-one">
+          <h3 id="player-one-name">Player One</h3>
+
+          <div class="col-3">
+            <div class="snippet" data-title="dot-pulse">
+              <div class="stage">
+                <div class="dot-pulse"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="player-two">
+          <h3 id="player-two-name">Player Two</h3>
+
+          <div class="col-4">
+            <div class="snippet" data-title="dot-pulse">
+              <div class="stage">
+                <div class="dot-pulse-two"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+
+  <!-- <a href="https://www.flaticon.com/free-icons/versus" title="versus icons">Versus icons created by Parzival’ 1997 - Flaticon</a> -->
+  <!-- <a href="https://www.flaticon.com/free-icons/artificial-intelligence" title="artificial intelligence icons">Artificial intelligence icons created by Triangle Squad - Flaticon</a> -->
 
   <script src="script.js"></script>
 </html>
